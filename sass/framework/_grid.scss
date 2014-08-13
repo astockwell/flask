@@ -8,19 +8,25 @@ $visual-grid: false;
 
 // Setup Breakpoints
 $no_of_columns: 12;
+$tiny-breakpoint:  480px;
 $small-breakpoint:  580px;
 $medium-breakpoint: 768px;
 $large-breakpoint:  1024px;
+$oversize-breakpoint:  1280px;
 
-$pre-small-only:  new-breakpoint(max-width ($small-breakpoint - 1) $no_of_columns);
-$small:           new-breakpoint(min-width $small-breakpoint $no_of_columns);
-$small-only:      new-breakpoint(min-width $small-breakpoint max-width ($medium-breakpoint - 1) $no_of_columns);
-$small-medium:    new-breakpoint(min-width $small-breakpoint max-width ($large-breakpoint - 1) $no_of_columns);
-$pre-medium-only: new-breakpoint(max-width ($medium-breakpoint - 1) $no_of_columns);
-$medium:          new-breakpoint(min-width $medium-breakpoint $no_of_columns);
-$medium-only:     new-breakpoint(min-width $medium-breakpoint max-width ($large-breakpoint - 1) $no_of_columns);
-$pre-large-only:  new-breakpoint(max-width ($large-breakpoint - 1) $no_of_columns);
-$large:           new-breakpoint(min-width $large-breakpoint $no_of_columns);
+$tiny:				new-breakpoint(min-width $tiny-breakpoint $no_of_columns);
+$pre-small-only:    new-breakpoint(max-width ($small-breakpoint - 1) $no_of_columns);
+$small:             new-breakpoint(min-width $small-breakpoint $no_of_columns);
+$small-only:        new-breakpoint(min-width $small-breakpoint max-width ($medium-breakpoint - 1) $no_of_columns);
+$small-medium:      new-breakpoint(min-width $small-breakpoint max-width ($large-breakpoint - 1) $no_of_columns);
+$pre-medium-only:   new-breakpoint(max-width ($medium-breakpoint - 1) $no_of_columns);
+$medium:            new-breakpoint(min-width $medium-breakpoint $no_of_columns);
+$medium-only:       new-breakpoint(min-width $medium-breakpoint max-width ($large-breakpoint - 1) $no_of_columns);
+$pre-large-only:    new-breakpoint(max-width ($large-breakpoint - 1) $no_of_columns);
+$large:             new-breakpoint(min-width $large-breakpoint $no_of_columns);
+$large-only:        new-breakpoint(min-width $large-breakpoint max-width ($oversize-breakpoint - 1) $no_of_columns);
+$pre-oversize-only: new-breakpoint(max-width ($oversize-breakpoint - 1) $no_of_columns);
+$oversize:          new-breakpoint(min-width $oversize-breakpoint $no_of_columns);
 
 // Set Neat grid settings to match Bourbon for Omega Reset (https://github.com/thoughtbot/neat#getting-started)
 $fg-column: $column;
