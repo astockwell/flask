@@ -153,6 +153,65 @@ mark {
 	}
 }
 
+// Mobile tweaks for use within .inner divs:
+@mixin full-width-mobile {
+	margin-left: -4.2%;
+	margin-right: -4.2%;
+
+	@include media($medium) {
+		margin-left: -2.1%;
+		margin-right: -2.1%;
+	}
+	@include media($large) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+@mixin full-width-mobile-padded {
+	@include full-width-mobile;
+	padding-left: 4.2%;
+	padding-right: 4.2%;
+
+	@include media($medium) {
+		padding-left: 2.1%;
+		padding-right: 2.1%;
+	}
+	@include media($large) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// Hang a background color to the edge of the browser
+@mixin hanging-left($color: white, $width: 100%) {
+	position: relative;
+
+	&:before {
+		background-color: $color;
+		content: "";
+		height: 100%;
+		position: absolute;
+		left: -$width;
+		top: 0;
+		width: $width;
+		z-index: 100;
+	}
+}
+@mixin hanging-right($color: white, $width: 100%) {
+	position: relative;
+
+	&:after {
+		background-color: $color;
+		content: "";
+		height: 100%;
+		position: absolute;
+		right: -$width;
+		top: 0;
+		width: $width;
+		z-index: 100;
+	}
+}
+
 // -------------------------------------------------
 // Project-specific Mixins
 // ---------------------------------------------- */
