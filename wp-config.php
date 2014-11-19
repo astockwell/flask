@@ -114,6 +114,8 @@ define('DB_COLLATE', '');
  */
 $table_prefix  = 'wp_';
 
+// ini_set('memory_limit', '64M');
+
 /**
  * WordPress Localized Language, defaults to English.
  *

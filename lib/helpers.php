@@ -4,10 +4,12 @@
  */
 if (!function_exists('flask_page_name')) {
 	function flask_page_name() {
-		if( is_page( basename( get_permalink() ) ) ){
-			$page_slug = "pagename-" . basename( get_permalink() );
-		}else { $page_slug = ''; }
-		return $page_slug;
+		$page_classes = array();
+		$page_slug = basename( get_permalink() );
+		if( is_page( $page_slug ) ) {
+			$page_classes[] = "pagename-" . $page_slug;
+		}
+		return $page_classes;
 	}
 }
 
@@ -39,11 +41,23 @@ if (!function_exists('get_the_content_by_id')) {
  * Retrieve post ID via page/post slug
  */
 if (!function_exists('get_post_id_from_slug')) {
-	function get_post_id_from_slug($slug) {
+	function get_post_id_from_slug($slug, $post_type = "") {
 		global $wpdb;
+		if ( !empty($post_type) ) {
+			$post_type = $wpdb->prepare("AND post_type = '%s'", $post_type);
+		} else {
+			$post_type = "AND post_type not in ('nav_menu_item', 'revision')";
+		}
 		$id = $wpdb->get_var(
 			$wpdb->prepare(
-				"SELECT ID FROM $wpdb->posts WHERE post_name = '%s' AND post_type not in ('nav_menu_item', 'revision')",
+				"
+					SELECT ID
+					FROM $wpdb->posts
+					WHERE post_name = '%s'
+					$post_type
+					AND post_status = 'publish'
+					LIMIT 1
+				",
 				$slug
 			)
 		);

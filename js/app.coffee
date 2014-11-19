@@ -72,25 +72,25 @@ $ ->
 	#
 	# Utility function: Balance height of elements
 	#
-	balance_height_of_children = ->
-		$els = $('.js-balance-children-height')
-		$els.each ->
-			$e = $(this)
-			tallestElHeight = 0
-			# Reset heights to auto
-			$e.children().each ->
-				$(this).css "height", "auto"
-			# Calculate the height of the tallest submenu
-			$e.children().each ->
-				tallestElHeight = if tallestElHeight > $(this).outerHeight() then tallestElHeight else $(this).outerHeight()
-			tallestElHeight = Math.ceil tallestElHeight
-			$e.children().each ->
-				$(this).css "height", "#{tallestElHeight}px"
+	# balance_height_of_children = ->
+	# 	$els = $('.js-balance-children-height')
+	# 	$els.each ->
+	# 		$e = $(this)
+	# 		tallestElHeight = 0
+	# 		# Reset heights to auto
+	# 		$e.children().each ->
+	# 			$(this).css "height", "auto"
+	# 		# Calculate the height of the tallest submenu
+	# 		$e.children().each ->
+	# 			tallestElHeight = if tallestElHeight > $(this).outerHeight() then tallestElHeight else $(this).outerHeight()
+	# 		tallestElHeight = Math.ceil tallestElHeight
+	# 		$e.children().each ->
+	# 			$(this).css "height", "#{tallestElHeight}px"
 
-	if $('.js-balance-children-height').length > 0
-		$window
-			.load(balance_height_of_children)
-			.resize(balance_height_of_children)
+	# if $('.js-balance-children-height').length > 0
+	# 	$window
+	# 		.load(balance_height_of_children)
+	# 		.resize(balance_height_of_children)
 
 
 	true
