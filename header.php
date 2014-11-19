@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie10 lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie10 lt-ie9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 9]>    <html class="lt-ie10" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie10 lt-ie9 lt-ie8 eq-ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie10 lt-ie9 eq-ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 9]>    <html class="lt-ie10 eq-ie9" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 
