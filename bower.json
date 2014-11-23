@@ -1,0 +1,30 @@
+{
+  "name": "Flask",
+  "version": "0.0.0",
+  "authors": [
+    "Alex Stockwell <astockwell@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "bootstrap": "~3.3.1",
+    "fontawesome": "~4.2.0",
+    "enquire": "~2.1.2",
+    "velocity": "~1.1.0",
+    "jquery-waypoints": "~2.0.5",
+    "flexslider": "*",
+    "fastclick": "~1.0.3",
+    "lodash": "~2.4.1",
+    "stellar": "~0.6.2",
+    "fancybox": "~2.1.5",
+    "cssua": "https://bitbucket.org/mckamey/cssuseragent/raw/d53e7f339b681401f6d93ac30872b6db9054adba/cssua.js"
+  }
+}
