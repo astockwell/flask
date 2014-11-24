@@ -1,0 +1,20 @@
+@mixin add-font(
+		$font-name,
+		$font-filename,
+		$font-weight: normal,
+		$font-style: normal
+	) {
+	@font-face {
+		font-family: $font-name;
+		src: url('fonts/#{$font-filename}.eot');
+		src: url('fonts/#{$font-filename}.eot?#iefix') format('embedded-opentype'),
+		url('fonts/#{$font-filename}.svg##{$font-filename}') format('svg'),
+		url('fonts/#{$font-filename}.otf') format('opentype'),
+		url('fonts/#{$font-filename}.ttf') format('truetype'),
+		url('fonts/#{$font-filename}.woff') format('woff');
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}
+
+// @include add-font("Clan", Clan-Book, 600, italic);
