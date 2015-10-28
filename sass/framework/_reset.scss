@@ -72,3 +72,4 @@ button{width:auto;overflow:visible;}
 // iOS fixes
 html { -webkit-text-size-adjust: none; }
 input { -webkit-appearance: none; -moz-appearance: none; }
+input[type='checkbox'] { -webkit-appearance: checkbox; -moz-appearance: checkbox; }
